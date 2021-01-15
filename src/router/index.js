@@ -13,7 +13,7 @@ const baseRoutes = [
   }
 ];
 
-const routes = [...baseRoutes, ...AdminRoutes]
+const routes = [...baseRoutes, ...AdminRoutes];
 
 const router = new VueRouter({
   mode: "history",
