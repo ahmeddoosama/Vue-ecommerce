@@ -4,7 +4,7 @@
       <slot name="title"></slot>
     </h3>
     <div class="actions">
-      <ve-button @click="addMethod">
+      <ve-button @click="addMethod" color="success">
         Add
       </ve-button>
     </div>
