@@ -1,11 +1,12 @@
 <template>
   <div class="categories">
-    <section-header :add-method="consoleMethod">
+    <section-header :add-method="showModelHandler" @addModelEvent="showModelHandler">
       <template #title>
         This is Title
       </template>
       <template #action> </template>
     </section-header>
+    <ve-model :show="showModel"></ve-model>
   </div>
 </template>
 
@@ -15,10 +16,15 @@ export default {
   components: {
     SectionHeader
   },
+  data() {
+      return {
+          showModel: false
+      }
+  },
   methods: {
-    consoleMethod() {
-      console.log("Worked!");
-    }
+      showModelHandler() {
+          this.showModel = true
+      }
   }
 };
 </script>
