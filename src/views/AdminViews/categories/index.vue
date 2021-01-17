@@ -6,7 +6,11 @@
       </template>
       <template #action> </template>
     </section-header>
-    <ve-model :show="showModel"></ve-model>
+    <ve-model :show="showModel" @close="hideModelHandler" :width="800">
+        <ve-button @click="hideModelHandler">
+            Close Model
+        </ve-button>
+    </ve-model>
   </div>
 </template>
 
@@ -24,6 +28,9 @@ export default {
   methods: {
       showModelHandler() {
           this.showModel = true
+      },
+      hideModelHandler() {
+          this.showModel = false
       }
   }
 };

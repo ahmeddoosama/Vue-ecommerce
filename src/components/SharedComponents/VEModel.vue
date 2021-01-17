@@ -1,8 +1,8 @@
 <template>
     <transition name="fade">
-        <div class="model-container" v-if="show">
-            <div class="model-content">
-
+        <div class="model-container" v-if="show" @click.self="$emit('close')">
+            <div class="model-content" :style="{'max-width': width+'px'}">
+                <slot></slot>
             </div>
         </div>
     </transition>
@@ -16,6 +16,11 @@ export default {
             type: Boolean,
             default: false,
             required: false
+        },
+        width: {
+            type: Number,
+            default: 500,
+            required: false
         }
     }
 }
@@ -26,6 +31,7 @@ export default {
     position: fixed;
     top: 0;
     bottom: 0;
+    padding: 15px;
     left: 0;
     right: 0;
     z-index: 50;
@@ -40,11 +46,9 @@ export default {
     }
     .model-content {
         width: 100%;
-        max-width: 500px;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
-        height: 400px;
         margin: 50px auto;
     }
 }
