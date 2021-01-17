@@ -11,14 +11,10 @@
     <nav>
       <ul>
         <li>
-          <a href="#">
-            Home
-          </a>
+          <router-link to="/admin">Home</router-link>
         </li>
         <li>
-          <a href="#">
-            Products
-          </a>
+          <router-link to="admin/Products">Products</router-link>
         </li>
       </ul>
     </nav>
@@ -51,6 +47,7 @@ $adminHeaderWidth: 200px;
     &.nav-opened {
         padding-left: $adminHeaderWidth;
         transition: padding-left 0.5s;
+        padding-top: 50px;
     }
 }
 

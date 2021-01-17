@@ -8,6 +8,8 @@
       <admin-header />
       <!-- End Header -->
       <h1>Admin Page</h1>
+
+      <router-view />
   </div>
 </template>
 
