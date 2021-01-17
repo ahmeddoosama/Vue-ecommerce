@@ -1,12 +1,9 @@
 <template>
-    <div class="products">
-
-    </div>
+  <div class="products"></div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

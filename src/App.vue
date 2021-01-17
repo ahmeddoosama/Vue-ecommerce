@@ -5,7 +5,9 @@
 </template>
 
 <style lang="scss">
-#app {}
+#app {
+}
 
-#nav {}
+#nav {
+}
 </style>
