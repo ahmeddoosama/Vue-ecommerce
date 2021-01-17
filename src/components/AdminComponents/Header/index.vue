@@ -10,11 +10,14 @@
 
     <nav>
       <ul>
-        <li>
+        <li :class="{'active': $route.name == 'admin'}">
           <router-link to="/admin">Home</router-link>
         </li>
-        <li>
-          <router-link to="admin/Products">Products</router-link>
+        <li :class="{'active': $route.name == 'products'}">
+          <router-link to="/admin/products">Products</router-link>
+        </li>
+        <li :class="{'active': $route.name == 'categories'}">
+          <router-link to="/admin/categories">categories</router-link>
         </li>
       </ul>
     </nav>
@@ -44,10 +47,10 @@ export default {
 $adminHeaderWidth: 200px;
 
 #admin-content-body{
+    transition: padding-left 0.5s;
+    padding: 50px 20px 0;
     &.nav-opened {
-        padding-left: $adminHeaderWidth;
-        transition: padding-left 0.5s;
-        padding-top: 50px;
+        padding-left: $adminHeaderWidth + 20px;
     }
 }
 
@@ -107,10 +110,7 @@ $adminHeaderWidth: 200px;
           }
       }
   }
-  .nav-opened & {
-    left: 0;
-    
-  }
+  .nav-opened & { left: 0; }
   ul {
     li {
       font-size: 16px;
@@ -118,7 +118,8 @@ $adminHeaderWidth: 200px;
         display: block;
         padding: 15px 20px;
       }
-      &:hover {
+      &:hover,
+      &.active{
         background-color: #000;
       }
     }
