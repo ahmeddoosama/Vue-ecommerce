@@ -13,13 +13,8 @@
 
 <script>
 
-import VEButton from "@/components/SharedComponents/VEButton";
-
 export default {
   props: ["addMethod"],
-  components: {
-      've-button':VEButton
-  }
 };
 </script>
 
