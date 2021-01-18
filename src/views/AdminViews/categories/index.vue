@@ -7,21 +7,23 @@
       <template #action> </template>
     </section-header>
     <ve-model :show="showModel" @close="hideModelHandler" :width="800">
-        <ve-button @click="hideModelHandler">
-            Close Model
-        </ve-button>
+        <category-form @cancelForm="hideModelHandler"></category-form>
     </ve-model>
   </div>
 </template>
 
 <script>
+
 import SectionHeader from "@/components/AdminComponents/SectionHeader";
+import CategoryForm from './categoryForm.vue';
+
 export default {
   components: {
-    SectionHeader
+    SectionHeader,
+    CategoryForm
   },
   data() {
-      return {
+     return {
           showModel: false
       }
   },

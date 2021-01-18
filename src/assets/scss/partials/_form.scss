@@ -1,0 +1,17 @@
+.form-input-holder {
+    display: block;
+    margin-bottom: 10px;
+    .input-title {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .form-input {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 6px 12px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
